@@ -35,9 +35,10 @@ db.Sequelize = Sequelize;
 // Asignamos la instancia de conexión Sequelize con los parámetros definidos
 db.sequelize = sequelize;
 
-// Importamos el modelo de cliente desde la carpeta 'models' y lo registramos en el objeto `db`
+// Importamos los modelos desde la carpeta 'models' y los registramos en el objeto `db`
 // Le pasamos la instancia de conexión `sequelize` y la clase `Sequelize` como argumentos
 db.clientes = require("./cliente.model.js")(sequelize, Sequelize);
+db.empleados = require("./empleado.model.js")(sequelize, Sequelize);
 
 // Aquí puedes seguir importando otros modelos de forma similar
 // Ejemplo: db.productos = require("./producto.model.js")(sequelize, Sequelize);
